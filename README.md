@@ -1,6 +1,6 @@
 # 📁 File Sharing
 
-Welcome to the **File Sharing** project! This repository provides a simple and efficient way to share files over a network. Whether you're working on a team project or need to transfer files between devices, this tool has got you covered.
+Welcome to the **File Sharing** project! This repository provides a simple and efficient way to share files over a network using Flask. Whether you're working on a team project or need to transfer files between devices, this tool has got you covered.
 
 !File Sharing
 
@@ -21,27 +21,31 @@ To get started with the File Sharing project, follow these steps:
     cd File-Sharing
     ```
 
-2. **Install dependencies**:
+2. **Create a virtual environment**:
     ```bash
-    npm install
+    python -m venv venv
+    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
     ```
 
-3. **Run the application**:
+3. **Install dependencies**:
     ```bash
-    npm start
+    pip install -r requirements.txt
+    ```
+
+4. **Run the application**:
+    ```bash
+    flask run
     ```
 
 ## 🛠️ Usage
 
 1. **Start the server**:
     ```bash
-    npm run server
+    flask run
     ```
 
-2. **Open the client**:
-    ```bash
-    npm run client
-    ```
+2. **Access the application**:
+    Open your web browser and go to `http://127.0.0.1:5000`.
 
 3. **Share Files**: Use the interface to select and share files with other devices on the network.
 
@@ -50,27 +54,11 @@ To get started with the File Sharing project, follow these steps:
 !Screenshot 1
 !Screenshot 2
 
-## 🤝 Contributing
+## 📋 Requirements
 
-We welcome contributions! Please follow these steps to contribute:
+Here are the dependencies required for this project:
 
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature-branch`).
-3. Make your changes and commit them (`git commit -m 'Add new feature'`).
-4. Push to the branch (`git push origin feature-branch`).
-5. Open a pull request.
-
-## 📝 License
-
-This project is licensed under the MIT License. See the LICENSE file for details.
-
-## 📧 Contact
-
-For any questions or suggestions, feel free to reach out:
-
-- **Email**: your-email@example.com
-- **GitHub**: programmingwithprince
-
----
-
-Thank you for using File Sharing! We hope it makes your file transfer tasks easier and more efficient. Happy sharing! 😊
+```plaintext
+Flask==2.1.2
+Flask-Cors==3.0.10
+Werkzeug==2.1.2
