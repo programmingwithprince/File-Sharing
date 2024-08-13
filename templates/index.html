@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>File Upload</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+  <header class="header">
+    <div class="logo" onclick="window.location.reload();">
+<span class="l1">File</span>
+<span class="l2">Transfer</span>
+    </div>
+  </header>
+<div class="container">
+  <div class="card">
+    <h3>Upload Files</h3>
+    <div class="drop_box">
+      <header>
+        <h4>Select File here</h4>
+      </header>
+      <p>Files Supported: PDF, TEXT, DOC , DOCX</p>
+    </div>
+      <input type="file" hidden accept=".doc,.docx,.pdf" id="input" style="display:none;">
+      <button class="btn" id="choose">Choose File</button>
+      <button class="btn" style="display:none;"  >Upload</button>
+
+  </div>
+</div>
+   <div class="footer">
+     <div class="box">
+  <h2>Download The files</h2>
+  <ul id="list">
+  </ul>
+</div>
+   </div>
+</body>
+<script src="{{url_for('static',filename='index.js')}}"></script>
+</html>
