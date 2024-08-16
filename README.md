@@ -27,7 +27,7 @@ To get started with the File Sharing project, follow these steps:
 
 3. **Install dependencies**:
     ```bash
-    pip install Flask Flask-Cors
+    pip install -r requirements.txt
     ```
 
 4. **Run the application**:
