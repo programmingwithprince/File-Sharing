@@ -4,7 +4,7 @@ import socket
 import qrcode #FOR GENERATE QR CODE FOR URL/LOCAL IP BUT CURRENTLY NOT IN USE
 
 port = 5000
-folderPath = r'd:\DEVELOPERS !!!\PYTHON DEVLOPMENT\File Transfer\uploads'
+folderPath = r'/uploads'
 
 
 app = Flask(__name__)
