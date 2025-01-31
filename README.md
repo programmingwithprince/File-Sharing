@@ -86,7 +86,7 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 For any questions or suggestions or freelancing services, feel free to reach out:
 
-- **Email**: tea4india.com
+- **Email**: tea4india@gmail.com
 - **GitHub**: programmingwithprince
 
 ---
