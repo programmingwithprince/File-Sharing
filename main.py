@@ -1,10 +1,16 @@
+#!/home/prince/File-Sharing/venv/bin/python3
+
 from flask import Flask, request, render_template,send_from_directory
-import os, json,webbrowser
+import os
 import socket
-import qrcode #FOR GENERATE QR CODE FOR URL/LOCAL IP BUT CURRENTLY NOT IN USE
 
 port = 5000
-folderPath = r'/uploads'
+folderPath = '/tmp/uploads'
+if not os.path.exists(folderPath):
+    os.makedirs(folderPath)
+#INITIALIZING THE UPLOAD FOLDER
+with open(f"{folderPath}/INITIALISATION" , "wb") as f:
+    f.write(b'x00')
 
 
 app = Flask(__name__)
@@ -20,10 +26,12 @@ def index():
 def upload_file():
     f = request.files['file']
     if f:
+
         f.save(f"{folderPath}/{f.filename}")
         return 'File uploaded successfully.'
     else:
-        return 'No file uploaded.'
+        return 'File not uploaded.'
+
 
 
 @app.route('/get_urls')
@@ -36,7 +44,7 @@ def send_url():
 def download(filename):
     #return render_template('index.html')
     # Use send_from_directory to serve the file
-    return send_from_directory('uploads',filename, as_attachment=True)    
+    return send_from_directory(folderPath,filename, as_attachment=True)
     
 def get_local_ip():
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -49,15 +57,7 @@ def get_local_ip():
     finally:
         s.close()
     return IP
-######
-# To be used when have to generate qr code to share its url/local IP
-
-# img = qrcode.make(f'http://{localIP}:{port}/')
-# img.show(img)
-#####
-
 localIP = get_local_ip()  
           
 if __name__ == '__main__':
-    webbrowser.open(f'http://{localIP}:5000')
     app.run(debug=True,host="0.0.0.0" ,port=port)       
