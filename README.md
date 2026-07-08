@@ -16,6 +16,8 @@ To get started with the File Sharing project, follow these steps:
 1. **Clone the repository**:
     ```bash
     git clone https://github.com/programmingwithprince/File-Sharing.git
+    ```
+    ```bash
     cd File-Sharing
     ```
 
@@ -47,27 +49,7 @@ To get started with the File Sharing project, follow these steps:
     or `f'http://{localIP}:5000'`
 3. **Share Files**: Use the interface to select and share files with other devices on the network.
 
-## 📋 Project Structure
 
-Here's an overview of the project's structure:
-
-```plaintext
-File-Sharing/
-├── app/
-│   ├── __init__.py
-│   ├── routes.py
-│   └── templates/
-│       └── index.html
-├── static/
-│   ├── css/
-│   ├── js/
-│   └── uploads/
-├── venv/
-├── .gitignore
-├── app.py
-├── requirements.txt
-└── README.md
-```
 ## 🤝 Contributing
 
 We welcome contributions! Please follow these steps to contribute:
@@ -86,7 +68,7 @@ This project is licensed under the GNU Affero General Public License v3.0 (AGPL-
 
 For any questions or suggestions or freelancing services, feel free to reach out:
 
-- **Email**: tea4india@gmail.com
+
 - **GitHub**: programmingwithprince
 
 ---
