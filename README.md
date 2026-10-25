@@ -1,6 +1,6 @@
 # 📁 File Sharing
 
-Welcome to the **File Sharing** project! This repository provides a simple and efficient way to share files over a network using Flask. Whether you're working on a team project or need to transfer files between devices, this tool has got you covered.
+Welcome to the **File Sharing** project! This repository provides a simple and efficient way to share files over a network using Flask. Whether you're with friends or need to transfer files between multiple devices like mac ,linux,andoid,windows,ios,etc. with the extreme speed you won't imagine.
 
 ## 🚀 Features
 
