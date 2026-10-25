@@ -1,5 +1,3 @@
-#!/home/prince/File-Sharing/venv/bin/python3
-
 from flask import Flask, request, render_template,send_from_directory
 import os
 import socket
